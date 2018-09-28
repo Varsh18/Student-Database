@@ -6,7 +6,15 @@ $cgpa=$_GET['cgpa'];
 $id=$_GET['id'];
 $con=mysqli_connect("localhost","root","");
 if($con){
-  
+  $db=mysqli_select_db($con,"myDB");
+  if($db){
+
+  }
+  else
+  echo "Database error";
+}
+else{
+  echo "MySQL not connected";
 }
 }
 ?>
