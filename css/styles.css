@@ -1,0 +1,16 @@
+body{
+  background: url("https://www.studying-in-germany.org/wp-content/uploads/2013/01/Fotolia_42575468_Subscription_XXL.jpg")no-repeat center center fixed;
+  -webkit-background-size:cover;
+  line-height:40px;
+}
+h1{
+  text-align: center;
+  font-family: cursive;
+  color:#44bd32;
+}
+#container{
+  box-sizing: border-box;
+  background-color:rgba(127, 143, 166,1.0);
+  width:500px;
+  height:600px;
+}
