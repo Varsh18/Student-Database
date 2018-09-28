@@ -24,6 +24,16 @@ if($con){
       break;
     }
     case 'delete':{
+      if(isset($id))
+      {
+      $query="delete from stud where id=$id";
+      if(mysqli_query($con,$query))
+      echo "Deleted successfully";
+      else
+      echo "Error in Deletion";
+      }
+      else
+      echo "Enter the id of the student";
     break;
     }
     case 'update':{
