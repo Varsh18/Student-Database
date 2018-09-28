@@ -11,6 +11,16 @@ if($con){
   if($db){
   switch($ch){
     case 'insert':{
+      if(isset($name)&&isset($id)&&isset($id))
+      {
+      $query="INSERT INTO stud values($name,$id,$cgpa)";
+      if(mysqli_query($con,$query))
+      echo "Inserted successfully";
+      else
+      echo "Error in insertion";
+      }
+      else
+      echo "Enter the required field";
       break;
     }
     case 'delete':{
