@@ -10,7 +10,9 @@ h1{
 }
 #container{
   box-sizing: border-box;
-  background-color:rgba(127, 143, 166,1.0);
+  background-color:rgba(127, 143, 166,0.3);
   width:500px;
   height:600px;
+  align-content:center;
+
 }
