@@ -9,7 +9,23 @@ $con=mysqli_connect("localhost","root","");
 if($con){
   $db=mysqli_select_db($con,"myDB");
   if($db){
+  switch($ch){
+    case 'insert':{
+      break;
+    }
+    case 'delete':{
+    break;
+    }
+    case 'update':{
+      break;
+    }
+    case 'display':{
+      break;
+    }
+    default:{
 
+    }
+  }
   }
   else
   echo "Database error";
