@@ -50,6 +50,10 @@ if($con){
       break;
     }
     case 'display':{
+      $query="select * from stud";
+      $res=mysqli_query($con,$query);
+      while($row=mysqli_fetch($res))
+      echo "$row[0] $row[1] $row[2] <br/>";
       break;
     }
     default:{
