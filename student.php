@@ -11,7 +11,7 @@ if($con){
   if($db){
   switch($ch){
     case 'insert':{
-      if(isset($name)&&isset($id)&&isset($id))
+      if(isset($name)&&isset($id)&&isset($cgpa))
       {
       $query="INSERT INTO stud values($name,$id,$cgpa)";
       if(mysqli_query($con,$query))
@@ -37,6 +37,16 @@ if($con){
     break;
     }
     case 'update':{
+      if(isset($id)&&isset($cgpa))
+      {
+      $query="update stud set cgpa=$cgpa where id=$id";
+      if(mysqli_query($con,$query))
+      echo "Updated successfully";
+      else
+      echo "Error in Updation";
+      }
+      else
+      echo "Enter the required field";
       break;
     }
     case 'display':{
