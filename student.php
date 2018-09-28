@@ -53,7 +53,7 @@ if($con){
       break;
     }
     default:{
-
+      echo "No option selected";
     }
   }
   }
