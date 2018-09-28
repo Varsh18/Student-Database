@@ -22,3 +22,11 @@ pre{
 input[type=text]{
   height:20px;
 }
+input[type=button]{
+width: 400px;
+height: 35px;
+color: #ffffff;
+font-size: 15px;
+font-weight: bold;
+background-color: #0fbcf9;
+}
