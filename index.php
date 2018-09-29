@@ -28,6 +28,7 @@
 </body>
 </html>
 <?php
+$name=$cgpa=$id=$ch=$status=$query="";
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
@@ -35,12 +36,13 @@ function test_input($data) {
   return $data;
 }
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
-$name=test_input($_REQUEST['n']);
-$cgpa=test_input($_GET["c"]);
-$id=test_input($_GET["i"]);
-$ch=test_input($_GET["o"]);
-$con=mysqli_connect("localhost","root","");
-$db=mysqli_select_db($con,"mydb");
+$name = isset($_GET['n']) ? test_input($_REQUEST['n']):'';
+$cgpa= isset($_GET['c']) ? test_input($_REQUEST['c']):'';
+$id= isset($_GET['i']) ? test_input($_REQUEST['i']):'';
+$ch= isset($_GET['o']) ? test_input($_REQUEST['o']):'';
+
+$con=mysqli_connect("localhost","root","") or die("cannot connect");
+$db=mysqli_select_db($con,"mydb") or die("db not connected");
 if($con){
   switch($ch){
     case 'insert':{
