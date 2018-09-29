@@ -44,7 +44,7 @@ $db=mysqli_select_db($con,"mydb");
 if($con){
   switch($ch){
     case 'insert':{
-      if(isset($name) && isset($id) && isset($cgpa))
+      if(!empty($name) && !empty($id) && !empty($cgpa))
       {
       $query="INSERT INTO stud values('$name','$id','$cgpa')";
       if(mysqli_query($con,$query))
