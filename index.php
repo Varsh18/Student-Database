@@ -57,13 +57,17 @@ if($con){
       break;
     }
     case 'delete':{
-      if(isset($id))
+      if(!empty($id))
       {
+        $result = mysqli_query($con,"SELECT id from stud where id='$id'");
+        if(mysqli_num_rows($result) > 0)
+        {
       $query="delete from stud where id='$id'";
       if(mysqli_query($con,$query))
       echo "Deleted successfully";
+    }
       else
-      echo "Error in Deletion";
+      echo "No record found";
       }
       else
       echo "Enter the id of the student";
