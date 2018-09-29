@@ -70,13 +70,17 @@ if($con){
     break;
     }
     case 'update':{
-      if(isset($id)&&isset($cgpa))
+      if(!empty($id)&& !empty($cgpa))
       {
+        $result = mysqli_query($con,"SELECT id from stud where id='$id'");
+        if(mysqli_num_rows($result) > 0)
+        {
       $query="update stud set cgpa='$cgpa' where id='$id'";
       if(mysqli_query($con,$query))
       echo "Updated successfully";
+       }
       else
-      echo "Error in Updation";
+      echo "No record found";
       }
       else
       echo "Enter the required field";
