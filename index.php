@@ -12,7 +12,7 @@
   <div id="container">
   <pre>
   Name   :<input type="text" name="n" size="45"/><br/>
-  Id     :<input type="text" name="i" size="45"/></br>
+  Id     :<input type="text" name="i" size="45"/><br/>
   CGPA   :<input type="text" name="c" size="45"/><br/>
 </pre>
   <input type="radio" name="o" value="insert">Insert
